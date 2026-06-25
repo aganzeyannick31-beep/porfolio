@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="View Aganze Yannick's gallery. A collection of creative moments and memorable experiences showcasing my work and life.">
+    <title>Aganze Yannick - Portfolio | Gallery</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="logo">Aganze Yannick</a>
+            
+            <div class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            
+            <ul class="nav-menu" id="navMenu">
+                <li class="nav-item">
+                    <a href="index.html" class="nav-link">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a href="about.html" class="nav-link">About Me</a>
+                </li>
+                <li class="nav-item">
+                    <a href="projects.html" class="nav-link">Projects</a>
+                </li>
+                <li class="nav-item">
+                    <a href="gallery.html" class="nav-link active">Gallery</a>
+                </li>
+                <li class="nav-item">
+                    <a href="contact.html" class="nav-link">Contact</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Gallery Section -->
+    <section class="gallery-section">
+        <h1 class="section-title">Gallery</h1>
+        <p class="section-subtitle">My Creative Moments</p>
+        
+        <!-- Carousel -->
+        <div class="carousel">
+            <div class="carousel-container">
+                <button class="carousel-btn prev-btn" id="prevBtn" onclick="changeSlide(-1)">❮</button>
+                
+                <div class="carousel-slide">
+                    <img id="carouselImage" src="images/IMG_20260608_110419.jpg" alt="Gallery image 1">
+                </div>
+                
+                <button class="carousel-btn next-btn" id="nextBtn" onclick="changeSlide(1)">❯</button>
+            </div>
+            
+            <div class="carousel-counter">
+                <span id="slideCounter">1</span> / <span id="totalSlides">12</span>
+            </div>
+        </div>
+
+        
+        <div class="gallery-grid">
+            <div class="gallery-item" onclick="goToSlide(0)">
+                <img src="images/IMG_20260608_110426.jpg" alt="Gallery image 1">
+            </div>
+            <div class="gallery-item" onclick="goToSlide(1)">
+                <img src="images/IMG_20260608_110426.jpg" alt="Gallery image 2">
+            </div>
+            <div class="gallery-item" onclick="goToSlide(2)">
+                <img src="images/IMG_20260608_110437.jpg" alt="Gallery image 3">
+            </div>
+            <div class="gallery-item" onclick="goToSlide(3)">
+                <img src="images/IMG_20260608_112115 (1).jpg" alt="Gallery image 4">
+            </div>
+            <div class="gallery-item" onclick="goToSlide(4)">
+                <img src="images/download.jpeg" alt="My dream car">
+            </div>
+            <div class="gallery-item" onclick="goToSlide(5)">
+                <img src="images/IMG_20260608_112121 (1).jpg" alt="Gallery image 6">
+            </div>
+            <div class="gallery-item" onclick="goToSlide(6)">
+                <img src="images/IMG_20260608_111441.jpg" alt="Gallery image 7">
+            </div>
+            <div class="gallery-item" onclick="goToSlide(7)">
+                <img src="images/IMG_20260608_110849.jpg" alt="Gallery image 8">
+            </div>
+            <div class="gallery-item" onclick="goToSlide(8)">
+                <img src="images/IMG_20260608_110843.jpg" alt="Gallery image 9">
+            </div>
+            <div class="gallery-item" onclick="goToSlide(9)">
+                <img src="images/IMG_20260608_110836.jpg" alt="Gallery image 10">
+            </div>
+            <div class="gallery-item" onclick="goToSlide(10)">
+                <img src="images/IMG_20260608_110828.jpg" alt="Gallery image 11">
+            </div>
+            <div class="gallery-item" onclick="goToSlide(11)">
+                <img src="images/IMG_20260608_110828.jpg" alt="Gallery image 12">
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-content">
+                <p>&copy; 2026 Aganze Yannick. All rights reserved.</p>
+            </div>
+            <div class="footer-links">
+                <a href="index.html">Home</a>
+                <a href="about.html">About</a>
+                <a href="projects.html">Projects</a>
+                <a href="gallery.html">Gallery</a>
+                <a href="contact.html">Contact</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/navigation.js"></script>
+    <script>
+        const galleryImages = [
+            'images/IMG_20260608_110419.jpg',
+            'images/IMG_20260608_110418.jpg',
+            'images/IMG_20260608_110401.jpg',
+            'images/IMG_20260608_110354.jpg',
+            'images/IMG_20260608_110313.jpg',
+            'images/IMG_20260608_110312.jpg',
+            'images/IMG_20260608_110310.jpg',
+            'images/IMG_20260608_110308.jpg',
+            'images/IMG_20260608_110307.jpg',
+            'images/IMG_20260608_110305.jpg',
+            'images/IMG_20260608_110259.jpg',
+            'images/IMG_20260608_110257.jpg'
+        ];
+
+        let currentSlide = 0;
+
+        function changeSlide(n) {
+            currentSlide = (currentSlide + n + galleryImages.length) % galleryImages.length;
+            updateCarousel();
+        }
+
+        function goToSlide(n) {
+            currentSlide = n;
+            updateCarousel();
+        }
+
+        function updateCarousel() {
+            document.getElementById('carouselImage').src = galleryImages[currentSlide];
+            document.getElementById('slideCounter').textContent = currentSlide + 1;
+        }
+
+        document.getElementById('totalSlides').textContent = galleryImages.length;
+    </script>
+</body>
+</html>
