@@ -139,44 +139,6 @@
         </div>
     </footer>
 
-    <script src="js/navigation.js"></script>
-    <script>
-        document.getElementById('contactForm').addEventListener('submit', function(e) {
-            e.preventDefault();
-
-            const name = document.getElementById('contactName').value.trim();
-            const email = document.getElementById('contactEmail').value.trim();
-            const message = document.getElementById('contactMessage').value.trim();
-            const formMessage = document.getElementById('formMessage');
-
-            // Validation
-            if (!name || !email || !message) {
-                formMessage.textContent = 'Please fill in all fields.';
-                formMessage.className = 'form-message error';
-                return;
-            }
-
-            // Email validation
-            const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-            if (!emailPattern.test(email)) {
-                formMessage.textContent = 'Please enter a valid email address.';
-                formMessage.className = 'form-message error';
-                return;
-            }
-
-            // Success message
-            formMessage.textContent = 'Thank you for your message! I\'ll get back to you soon.';
-            formMessage.className = 'form-message success';
-
-            // Reset form
-            this.reset();
-
-            // Clear message after 5 seconds
-            setTimeout(() => {
-                formMessage.textContent = '';
-                formMessage.className = 'form-message';
-            }, 5000);
-        });
-    </script>    
+    <script src="navigation.js"></script>
 </body>
 </html>

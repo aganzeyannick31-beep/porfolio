@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content=" View Aganze Yannick's gallery. A collection of creative moments and memorable experiences showcasing my work and life.">
+    <meta name="description" content="View Aganze Yannick's gallery. A collection of creative moments and memorable experiences showcasing my work and life.">
     <title>Aganze Yannick - Portfolio | Gallery</title>
     <link rel="stylesheet" href="style.css">
 </head>
@@ -50,7 +50,7 @@
                 <button class="carousel-btn prev-btn" id="prevBtn" onclick="changeSlide(-1)">❮</button>
                 
                 <div class="carousel-slide">
-                    <img id="carouselImage" src="images/IMG_20260608_110419.jpg" alt="Gallery image 1">
+                    <img id="carouselImage" src="IMG_20260608_110426.jpg" alt="Gallery carousel image" loading="lazy">
                 </div>
                 
                 <button class="carousel-btn next-btn" id="nextBtn" onclick="changeSlide(1)">❯</button>
@@ -64,40 +64,40 @@
         
         <div class="gallery-grid">
             <div class="gallery-item" onclick="goToSlide(0)">
-                <img src="images/IMG_20260608_110426.jpg" alt="Gallery image 1">
+                <img src="IMG_20260608_110426.jpg" alt="Gallery image 1" loading="lazy">
             </div>
             <div class="gallery-item" onclick="goToSlide(1)">
-                <img src="images/IMG_20260608_110426.jpg" alt="Gallery image 2">
+                <img src="IMG_20260608_110431.jpg" alt="Gallery image 2" loading="lazy">
             </div>
             <div class="gallery-item" onclick="goToSlide(2)">
-                <img src="images/IMG_20260608_110437.jpg" alt="Gallery image 3">
+                <img src="IMG_20260608_110437.jpg" alt="Gallery image 3" loading="lazy">
             </div>
             <div class="gallery-item" onclick="goToSlide(3)">
-                <img src="images/IMG_20260608_112115 (1).jpg" alt="Gallery image 4">
+                <img src="IMG_20260608_112115.jpg" alt="Gallery image 4" loading="lazy">
             </div>
             <div class="gallery-item" onclick="goToSlide(4)">
-                <img src="images/download.jpeg" alt="My dream car">
+                <img src="download.jpeg" alt="My dream car" loading="lazy">
             </div>
             <div class="gallery-item" onclick="goToSlide(5)">
-                <img src="images/IMG_20260608_112121 (1).jpg" alt="Gallery image 6">
+                <img src="IMG_20260608_112121.jpg" alt="Gallery image 6" loading="lazy">
             </div>
             <div class="gallery-item" onclick="goToSlide(6)">
-                <img src="images/IMG_20260608_111441.jpg" alt="Gallery image 7">
+                <img src="IMG_20260608_111441.jpg" alt="Gallery image 7" loading="lazy">
             </div>
             <div class="gallery-item" onclick="goToSlide(7)">
-                <img src="images/IMG_20260608_110849.jpg" alt="Gallery image 8">
+                <img src="IMG_20260608_110849.jpg" alt="Gallery image 8" loading="lazy">
             </div>
             <div class="gallery-item" onclick="goToSlide(8)">
-                <img src="images/IMG_20260608_110843.jpg" alt="Gallery image 9">
+                <img src="IMG_20260608_110843.jpg" alt="Gallery image 9" loading="lazy">
             </div>
             <div class="gallery-item" onclick="goToSlide(9)">
-                <img src="images/IMG_20260608_110836.jpg" alt="Gallery image 10">
+                <img src="IMG_20260608_110836.jpg" alt="Gallery image 10" loading="lazy">
             </div>
             <div class="gallery-item" onclick="goToSlide(10)">
-                <img src="images/IMG_20260608_110828.jpg" alt="Gallery image 11">
+                <img src="IMG_20260608_110828.jpg" alt="Gallery image 11" loading="lazy">
             </div>
             <div class="gallery-item" onclick="goToSlide(11)">
-                <img src="images/IMG_20260608_110828.jpg" alt="Gallery image 12">
+                <img src="IMG_20260608_110812.jpg" alt="Gallery image 12" loading="lazy">
             </div>
         </div>
     </section>
@@ -118,21 +118,21 @@
         </div>
     </footer>
 
-    <script src="js/navigation.js"></script>
+    <script src="navigation.js"></script>
     <script>
         const galleryImages = [
-            'images/IMG_20260608_110419.jpg',
-            'images/IMG_20260608_110418.jpg',
-            'images/IMG_20260608_110401.jpg',
-            'images/IMG_20260608_110354.jpg',
-            'images/IMG_20260608_110313.jpg',
-            'images/IMG_20260608_110312.jpg',
-            'images/IMG_20260608_110310.jpg',
-            'images/IMG_20260608_110308.jpg',
-            'images/IMG_20260608_110307.jpg',
-            'images/IMG_20260608_110305.jpg',
-            'images/IMG_20260608_110259.jpg',
-            'images/IMG_20260608_110257.jpg'
+            'IMG_20260608_110426.jpg',
+            'IMG_20260608_110431.jpg',
+            'IMG_20260608_110437.jpg',
+            'IMG_20260608_112115.jpg',
+            'download.jpeg',
+            'IMG_20260608_112121.jpg',
+            'IMG_20260608_111441.jpg',
+            'IMG_20260608_110849.jpg',
+            'IMG_20260608_110843.jpg',
+            'IMG_20260608_110836.jpg',
+            'IMG_20260608_110828.jpg',
+            'IMG_20260608_110812.jpg'
         ];
 
         let currentSlide = 0;
